@@ -23,7 +23,7 @@ export default function Home() {
           Projektujemy i rozwijamy rozwiązania, które budują przewagę. 
           Od web developmentu po zaawansowaną infrastrukturę serwerową.
         </p>
-        <a href="mailto:TWÓJ_EMAIL@gmail.com" className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-all">
+        <a href="mailto:okt4wi4n@gmail.com" className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-all">
           Rozpocznij współpracę
         </a>
       </section>
