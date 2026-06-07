@@ -1,11 +1,16 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-black text-white selection:bg-white selection:text-black scroll-smooth">
+    <main className="flex min-h-screen flex-col bg-black text-white selection:bg-white selection:text-black">
       {/* Nawigacja */}
       <nav className="flex items-center justify-between px-8 py-6 w-full max-w-7xl mx-auto">
         <div className="text-xl font-bold tracking-tighter">VELOS</div>
         <div className="flex gap-8 text-sm text-gray-400">
-          <a href="#uslugi" className="hover:text-white transition-colors">Usługi</a>
+          <button 
+            onClick={() => document.getElementById('uslugi')?.scrollIntoView({ behavior: 'smooth' })}
+            className="hover:text-white transition-colors cursor-pointer bg-transparent border-none text-gray-400 hover:text-white"
+          >
+            Usługi
+          </button>
           <a href="https://discord.gg/TWOJ_LINK_DO_ZEN" target="_blank" className="hover:text-white transition-colors">ZEN-Shop</a>
           <a href="mailto:TWÓJ_EMAIL@gmail.com" className="text-white font-medium">Kontakt</a>
         </div>
