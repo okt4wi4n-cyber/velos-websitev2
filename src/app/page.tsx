@@ -24,8 +24,8 @@ export default function Home() {
           Od web developmentu po zaawansowaną infrastrukturę serwerową.
         </p>
         <button className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-all">
-          Rozpocznij współpracę
-        </button>
+      Rozpocznij współpracę
+     </button>
       </section>
 
       {/* Usługi */}
