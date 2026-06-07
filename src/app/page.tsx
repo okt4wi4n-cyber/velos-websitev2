@@ -1,26 +1,13 @@
 'use client';
 
-import { useRef } from 'react';
-
 export default function Home() {
-  const servicesRef = useRef<HTMLDivElement>(null);
-
-  const scrollToServices = () => {
-    servicesRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <main className="flex min-h-screen flex-col bg-black text-white selection:bg-white selection:text-black">
       {/* Nawigacja */}
       <nav className="flex items-center justify-between px-8 py-6 w-full max-w-7xl mx-auto">
         <div className="text-xl font-bold tracking-tighter">VELOS</div>
         <div className="flex gap-8 text-sm text-gray-400">
-          <button 
-            onClick={scrollToServices}
-            className="hover:text-white transition-colors bg-transparent border-none cursor-pointer"
-          >
-            Usługi
-          </button>
+          <a href="#uslugi" className="hover:text-white transition-colors cursor-pointer">Usługi</a>
           <a href="https://discord.gg/TWOJ_LINK_DO_ZEN" target="_blank" className="hover:text-white transition-colors">ZEN-Shop</a>
           <a href="mailto:TWÓJ_EMAIL@gmail.com" className="text-white font-medium">Kontakt</a>
         </div>
@@ -43,8 +30,8 @@ export default function Home() {
         </a>
       </section>
 
-      {/* Usługi - tutaj przypinamy ref */}
-      <section ref={servicesRef} className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-20">
+      {/* Usługi - tutaj jest id="uslugi" */}
+      <section id="uslugi" className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-20">
         <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30 hover:border-white/20 transition-all duration-300">
           <h3 className="font-semibold text-lg">Web Development</h3>
           <p className="text-gray-400 mt-3 text-sm leading-relaxed">Strony, które konwertują odwiedzających w płacących klientów.</p>
