@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-black text-white selection:bg-white selection:text-black">
+    <main className="flex min-h-screen flex-col bg-black text-white scroll-smooth ...">
       {/* Nawigacja */}
       <nav className="flex items-center justify-between px-8 py-6 w-full max-w-7xl mx-auto">
         <div className="text-xl font-bold tracking-tighter">VELOS</div>
