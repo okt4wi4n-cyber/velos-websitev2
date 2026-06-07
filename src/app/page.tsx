@@ -44,6 +44,16 @@ export default function Home() {
           </div>
         </section>
 
+     {/* Dlaczego my */}
+        <section className="w-full max-w-7xl mx-auto px-8 py-10">
+        <div className="p-8 border border-white/5 rounded-3xl bg-white/5 text-center">
+          <h3 className="text-xl font-bold mb-2">Oferta specjalna na start</h3>
+          <p className="text-gray-400 text-sm">
+            Zamów dowolną usługę w tym miesiącu, a otrzymasz <strong>darmową konfigurację domeny i audyt bezpieczeństwa</strong> w pakiecie.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="w-full py-10 border-t border-white/5 text-center text-sm text-gray-500">
         <p>&copy; {new Date().getFullYear()} VELOS. All rights reserved.</p>
