@@ -1,3 +1,5 @@
+'use client';
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-black text-white selection:bg-white selection:text-black">
