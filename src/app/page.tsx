@@ -29,20 +29,20 @@ export default function Home() {
       </section>
 
       {/* Usługi */}
-      <section className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-20">
-        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30 hover:border-white/20 transition-all duration-300">
-          <h3 className="font-semibold text-lg">Web Development</h3>
-          <p className="text-gray-400 mt-3 text-sm leading-relaxed">Modern, fast, and scalable websites built for performance.</p>
-        </div>
-        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30 hover:border-white/20 transition-all duration-300">
-          <h3 className="font-semibold text-lg">Bot Solutions</h3>
-          <p className="text-gray-400 mt-3 text-sm leading-relaxed">Custom Discord bots engineered to automate and scale your community.</p>
-        </div>
-        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30 hover:border-white/20 transition-all duration-300">
-          <h3 className="font-semibold text-lg">Game Servers</h3>
-          <p className="text-gray-400 mt-3 text-sm leading-relaxed">Optimized Minecraft server infrastructure with premium support.</p>
-        </div>
-      </section>
+        <section className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-20">
+          <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30 hover:border-white/20 transition-all duration-300">
+            <h3 className="font-semibold text-lg">Web Development</h3>
+            <p className="text-gray-400 mt-3 text-sm leading-relaxed">Strony, które konwertują odwiedzających w płacących klientów. Pełna optymalizacja i nowoczesny design.</p>
+          </div>
+          <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30 hover:border-white/20 transition-all duration-300">
+            <h3 className="font-semibold text-lg">Bot Solutions</h3>
+            <p className="text-gray-400 mt-3 text-sm leading-relaxed">Automatyzacja, która oszczędza Twój czas i buduje zaangażowaną społeczność na Discordzie.</p>
+          </div>
+          <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30 hover:border-white/20 transition-all duration-300">
+            <h3 className="font-semibold text-lg">Game Servers</h3>
+            <p className="text-gray-400 mt-3 text-sm leading-relaxed">Stabilna infrastruktura Minecraft z wsparciem premium – Twój serwer zawsze dostępny i bez lagów.</p>
+          </div>
+        </section>
 
       {/* Footer */}
       <footer className="w-full py-10 border-t border-white/5 text-center text-sm text-gray-500">
