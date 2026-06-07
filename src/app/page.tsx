@@ -7,7 +7,7 @@ export default function Home() {
         <div className="flex gap-8 text-sm text-gray-400">
           <a href="#uslugi" className="hover:text-white transition-colors">Usługi</a>
           <a href="https://discord.gg/TWOJ_LINK_DO_ZEN" target="_blank" className="hover:text-white transition-colors">ZEN-Shop</a>
-          <a href="mailto:TWÓJ_EMAIL@gmail.com" className="text-white font-medium">Kontakt</a>
+          <a href="mailto:okt4wi4n@gmail.com" className="text-white font-medium">Kontakt</a>
         </div>
       </nav>
 
