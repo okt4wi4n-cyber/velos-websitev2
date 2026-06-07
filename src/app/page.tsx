@@ -7,8 +7,7 @@ export default function Home() {
       <nav className="flex items-center justify-between px-8 py-6 w-full max-w-7xl mx-auto">
         <div className="text-xl font-bold tracking-tighter">VELOS</div>
         <div className="flex gap-8 text-sm text-gray-400">
-          <a href="#uslugi" className="hover:text-white transition-colors cursor-pointer">Usługi</a>
-          <a href="https://discord.gg/TWOJ_LINK_DO_ZEN" target="_blank" className="hover:text-white transition-colors">ZEN-Shop</a>
+          <a href="https://discord.gg/TWOJ_LINK" className="hover:text-white transition-colors">ZEN-Shop</a>
           <a href="mailto:TWÓJ_EMAIL@gmail.com" className="text-white font-medium">Kontakt</a>
         </div>
       </nav>
@@ -30,17 +29,17 @@ export default function Home() {
         </a>
       </section>
 
-      {/* Usługi - tutaj jest id="uslugi" */}
-      <section id="uslugi" className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-20">
-        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30 hover:border-white/20 transition-all duration-300">
+      {/* Usługi */}
+      <section className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-20">
+        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30">
           <h3 className="font-semibold text-lg">Web Development</h3>
           <p className="text-gray-400 mt-3 text-sm leading-relaxed">Strony, które konwertują odwiedzających w płacących klientów.</p>
         </div>
-        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30 hover:border-white/20 transition-all duration-300">
+        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30">
           <h3 className="font-semibold text-lg">Bot Solutions</h3>
           <p className="text-gray-400 mt-3 text-sm leading-relaxed">Automatyzacja, która oszczędza Twój czas.</p>
         </div>
-        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30 hover:border-white/20 transition-all duration-300">
+        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30">
           <h3 className="font-semibold text-lg">Game Servers</h3>
           <p className="text-gray-400 mt-3 text-sm leading-relaxed">Stabilna infrastruktura Minecraft bez lagów.</p>
         </div>
