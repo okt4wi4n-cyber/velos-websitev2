@@ -1,61 +1,202 @@
+```tsx
 'use client';
 
 import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#050505] text-white p-6 md:p-12 font-sans">
-      
-      {/* Nawigacja */}
-      <nav className="flex justify-between items-center max-w-6xl mx-auto mb-20">
-        <div className="text-xl font-bold tracking-tighter">VELOS.</div>
-        <div className="flex gap-6 text-sm text-neutral-400">
-          <a href="mailto:kontakt@velos.dev" className="bg-white/5 px-4 py-2 rounded-full hover:bg-white/10 transition">Start Project</a>
+    <main className="min-h-screen bg-black text-white overflow-hidden">
+      {/* Background */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_40%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#000,#050505,#000)]" />
+      </div>
+
+      {/* Navbar */}
+      <nav className="sticky top-0 z-50 backdrop-blur-xl border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+          <h1 className="text-2xl font-black tracking-tight">
+            VELOS.
+          </h1>
+
+          <a
+            href="#kontakt"
+            className="px-5 py-2 rounded-full bg-white text-black font-semibold hover:scale-105 transition"
+          >
+            Darmowa wycena
+          </a>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="max-w-4xl mx-auto text-center mb-32">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-[1.1]">
-          Twoja wizja, <span className="text-neutral-500">zoptymalizowana technologicznie.</span>
-        </h1>
-        <p className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto">
-          Projektujemy cyfrowe fundamenty dla firm, które nie uznają kompromisów w wydajności.
-        </p>
-      </section>
-
-      {/* Bento Grid - Nowoczesny standard */}
-      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[600px]">
-        
-        {/* Główny box */}
-        <div className="md:col-span-2 p-8 bg-neutral-900/30 border border-white/5 rounded-3xl flex flex-col justify-end">
-          <h2 className="text-3xl font-semibold mb-2">Wydajność to waluta.</h2>
-          <p className="text-neutral-400">Budujemy systemy, które ładują się natychmiast i skalują bez ograniczeń.</p>
-        </div>
-
-        {/* Małe boxy */}
-        <div className="p-8 bg-neutral-900/30 border border-white/5 rounded-3xl">
-          <h3 className="text-xl mb-2">Boty AI</h3>
-          <p className="text-sm text-neutral-500">Automatyzacja, która pracuje, gdy Ty śpisz.</p>
-        </div>
-
-        <div className="p-8 bg-neutral-900/30 border border-white/5 rounded-3xl">
-          <h3 className="text-xl mb-2">Infrastruktura</h3>
-          <p className="text-sm text-neutral-500">Zero przestojów, 100% kontroli.</p>
-        </div>
-
-        <div className="md:col-span-2 p-8 bg-white text-black rounded-3xl flex items-center justify-between">
-          <div>
-            <h3 className="text-2xl font-bold">Gotowy na przeskok?</h3>
-            <p className="text-neutral-600">Porozmawiajmy o Twoim projekcie.</p>
+      <section className="max-w-7xl mx-auto px-6 pt-32 pb-32">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="inline-flex mb-6 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-neutral-300">
+            Strony WWW • Automatyzacje • AI
           </div>
-          <button className="bg-black text-white px-6 py-3 rounded-full font-bold">Kontakt</button>
+
+          <h1 className="text-6xl md:text-8xl font-black tracking-tight leading-none max-w-5xl">
+            Tworzymy
+            <span className="text-neutral-500"> nowoczesne </span>
+            rozwiązania,
+            które zdobywają klientów.
+          </h1>
+
+          <p className="text-neutral-400 text-xl mt-8 max-w-2xl">
+            Projektujemy szybkie strony internetowe, systemy
+            automatyzacji i rozwiązania AI dla firm, które chcą
+            rozwijać się szybciej od konkurencji.
+          </p>
+
+          <div className="flex flex-wrap gap-4 mt-10">
+            <a
+              href="#kontakt"
+              className="bg-white text-black px-8 py-4 rounded-full font-bold"
+            >
+              Rozpocznij projekt
+            </a>
+
+            <a
+              href="#oferta"
+              className="border border-white/10 px-8 py-4 rounded-full"
+            >
+              Zobacz ofertę
+            </a>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Stats */}
+      <section className="max-w-7xl mx-auto px-6 mb-32">
+        <div className="grid md:grid-cols-3 gap-5">
+          {[
+            ['<1s', 'Czas ładowania'],
+            ['24/7', 'Wsparcie'],
+            ['99.9%', 'Dostępność']
+          ].map(([value, label]) => (
+            <div
+              key={label}
+              className="p-8 rounded-3xl border border-white/5 bg-white/[0.03]"
+            >
+              <h3 className="text-5xl font-black">{value}</h3>
+              <p className="text-neutral-500 mt-2">{label}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      <footer className="max-w-6xl mx-auto mt-20 text-center text-neutral-700 text-sm">
-        © 2026 VELOS. All rights reserved.
-      </footer>
+      {/* Oferta */}
+      <section
+        id="oferta"
+        className="max-w-7xl mx-auto px-6 mb-32"
+      >
+        <h2 className="text-5xl font-black mb-12">
+          Nasze usługi
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-5">
+          <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/5">
+            <h3 className="text-2xl font-bold mb-4">
+              Strony WWW
+            </h3>
+            <p className="text-neutral-400">
+              Nowoczesne strony internetowe zoptymalizowane pod
+              sprzedaż i SEO.
+            </p>
+          </div>
+
+          <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/5">
+            <h3 className="text-2xl font-bold mb-4">
+              Boty AI
+            </h3>
+            <p className="text-neutral-400">
+              Automatyczna obsługa klientów i inteligentne
+              systemy wspomagające biznes.
+            </p>
+          </div>
+
+          <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/5">
+            <h3 className="text-2xl font-bold mb-4">
+              Automatyzacje
+            </h3>
+            <p className="text-neutral-400">
+              Eliminujemy ręczną pracę i oszczędzamy Twój czas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio */}
+      <section className="max-w-7xl mx-auto px-6 mb-32">
+        <h2 className="text-5xl font-black mb-12">
+          Wybrane projekty
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-5">
+          <div className="h-80 rounded-3xl bg-gradient-to-br from-neutral-900 to-neutral-800 border border-white/5 p-8">
+            <h3 className="text-2xl font-bold">
+              E-commerce
+            </h3>
+          </div>
+
+          <div className="h-80 rounded-3xl bg-gradient-to-br from-neutral-900 to-neutral-800 border border-white/5 p-8">
+            <h3 className="text-2xl font-bold">
+              System AI
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      {/* Opinie */}
+      <section className="max-w-7xl mx-auto px-6 mb-32">
+        <h2 className="text-5xl font-black mb-12">
+          Opinie klientów
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-5">
+          <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/5">
+            <p className="text-neutral-300 text-lg">
+              "Profesjonalna realizacja. Strona działa błyskawicznie
+              i wygląda świetnie."
+            </p>
+          </div>
+
+          <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/5">
+            <p className="text-neutral-300 text-lg">
+              "Automatyzacja zaoszczędziła nam wiele godzin pracy
+              tygodniowo."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section
+        id="kontakt"
+        className="max-w-5xl mx-auto px-6 pb-32 text-center"
+      >
+        <div className="p-12 rounded-[40px] bg-white text-black">
+          <h2 className="text-5xl font-black mb-4">
+            Gotowy na rozwój?
+          </h2>
+
+          <p className="text-neutral-700 text-lg mb-8">
+            Napisz do nas i otrzymaj darmową wycenę projektu.
+          </p>
+
+          <a
+            href="mailto:kontakt@velos.dev"
+            className="inline-block px-8 py-4 rounded-full bg-black text-white font-bold"
+          >
+            Skontaktuj się
+          </a>
+        </div>
+      </section>
     </main>
   );
 }
+```
