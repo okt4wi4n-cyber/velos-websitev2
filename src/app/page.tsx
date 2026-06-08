@@ -1,53 +1,66 @@
 'use client';
 
+import { motion } from 'framer-motion';
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-black text-white selection:bg-white selection:text-black">
-      {/* Nawigacja */}
-      <nav className="flex items-center justify-between px-8 py-6 w-full max-w-7xl mx-auto">
-        <div className="text-xl font-bold tracking-tighter">VELOS</div>
-        <div className="flex gap-8 text-sm text-gray-400">
-          <a href="https://discord.gg/TWOJ_LINK" className="hover:text-white transition-colors">ZEN-Shop</a>
-          <a href="mailto:TWÓJ_EMAIL@gmail.com" className="text-white font-medium">Kontakt</a>
+    <main className="min-h-screen bg-[#050505] text-white selection:bg-white selection:text-black font-sans">
+      
+      {/* Nawigacja - Premium Minimalizm */}
+      <nav className="flex items-center justify-between px-12 py-8 max-w-7xl mx-auto">
+        <div className="text-2xl font-bold tracking-tighter">VELOS</div>
+        <div className="flex gap-10 text-sm uppercase tracking-widest text-neutral-500">
+          <a href="#oferta" className="hover:text-white transition-colors">Oferta</a>
+          <a href="mailto:contact@velos.dev" className="text-white border-b border-white">Kontakt</a>
         </div>
       </nav>
 
-      {/* Hero */}
-      <section className="flex flex-1 flex-col items-center justify-center text-center px-4">
-        <span className="px-3 py-1 mb-6 text-xs font-medium border border-white/10 rounded-full text-gray-400">
-          Nowy standard cyfrowy
-        </span>
-        <h1 className="text-7xl font-bold tracking-tighter mb-6">
-          Cyfrowa doskonałość<br />dla Twojego biznesu.
-        </h1>
-        <p className="text-xl text-gray-400 max-w-lg mb-10">
-          Projektujemy i rozwijamy rozwiązania, które budują przewagę. 
-          Od web developmentu po zaawansowaną infrastrukturę serwerową.
-        </p>
-        <a href="mailto:TWÓJ_EMAIL@gmail.com" className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-all">
-          Rozpocznij współpracę
-        </a>
+      {/* Hero - Skupienie na wartości */}
+      <section className="flex flex-col items-center justify-center pt-32 pb-20 px-6 text-center">
+        <motion.span 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500"
+        >
+          Partner Technologiczny Twojego Biznesu
+        </motion.span>
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="text-6xl md:text-8xl font-medium tracking-tight mb-8"
+        >
+          Skalujemy Twoją <br/> infrastrukturę cyfrową.
+        </motion.h1>
+        <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="text-lg text-neutral-400 max-w-xl mb-12 leading-relaxed"
+        >
+          Dostarczamy wysokowydajne rozwiązania software'owe i infrastrukturę klasy korporacyjnej. 
+          Zamieniamy wyzwania techniczne w Twoją przewagę rynkową.
+        </motion.p>
       </section>
 
-      {/* Usługi */}
-      <section className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-20">
-        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30">
-          <h3 className="font-semibold text-lg">Web Development</h3>
-          <p className="text-gray-400 mt-3 text-sm leading-relaxed">Strony, które konwertują odwiedzających w płacących klientów.</p>
-        </div>
-        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30">
-          <h3 className="font-semibold text-lg">Bot Solutions</h3>
-          <p className="text-gray-400 mt-3 text-sm leading-relaxed">Automatyzacja, która oszczędza Twój czas.</p>
-        </div>
-        <div className="p-10 border border-white/10 rounded-3xl bg-neutral-900/30">
-          <h3 className="font-semibold text-lg">Game Servers</h3>
-          <p className="text-gray-400 mt-3 text-sm leading-relaxed">Stabilna infrastruktura Minecraft bez lagów.</p>
-        </div>
+      {/* Oferta - Język korzyści */}
+      <section id="oferta" className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-8">
+        {[
+          { title: "Architektura Systemów", desc: "Optymalizujemy przepływ danych i eliminujemy wąskie gardła." },
+          { title: "Rozwój Produktu", desc: "Tworzymy narzędzia, które pracują dla Ciebie 24/7." },
+          { title: "Infrastruktura", desc: "Stabilność klasy korporacyjnej dla najbardziej wymagających projektów." }
+        ].map((item, idx) => (
+          <div key={idx} className="p-8 border border-neutral-800 rounded-[20px] bg-neutral-900/20 hover:border-neutral-600 transition-colors">
+            <h3 className="text-xl font-medium mb-4">{item.title}</h3>
+            <p className="text-neutral-400 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
       </section>
 
       {/* Footer */}
-      <footer className="w-full py-10 border-t border-white/5 text-center text-sm text-gray-500">
+      <footer className="max-w-7xl mx-auto px-12 py-12 border-t border-neutral-900 flex justify-between items-center text-xs text-neutral-600">
         <p>&copy; {new Date().getFullYear()} VELOS. All rights reserved.</p>
+        <p>BUILDING THE FUTURE</p>
       </footer>
     </main>
   );
