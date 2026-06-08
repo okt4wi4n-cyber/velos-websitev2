@@ -203,7 +203,7 @@ return ( <main className="min-h-screen bg-black text-white overflow-hidden"> <di
       </p>
 
       <a
-        href="mailto:kontakt@velos.dev"
+        href="kontact.velos@gmail.com"
         className="inline-block bg-black text-white px-8 py-4 rounded-full font-bold"
       >
         Skontaktuj się
@@ -211,7 +211,6 @@ return ( <main className="min-h-screen bg-black text-white overflow-hidden"> <di
     </div>
   </section>
 </main>
-```
 
 );
 }
