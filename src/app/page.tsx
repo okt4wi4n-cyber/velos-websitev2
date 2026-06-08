@@ -4,63 +4,57 @@ import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#050505] text-white selection:bg-white selection:text-black font-sans">
+    <main className="min-h-screen bg-[#050505] text-white p-6 md:p-12 font-sans">
       
-      {/* Nawigacja - Premium Minimalizm */}
-      <nav className="flex items-center justify-between px-12 py-8 max-w-7xl mx-auto">
-        <div className="text-2xl font-bold tracking-tighter">VELOS</div>
-        <div className="flex gap-10 text-sm uppercase tracking-widest text-neutral-500">
-          <a href="#oferta" className="hover:text-white transition-colors">Oferta</a>
-          <a href="mailto:contact@velos.dev" className="text-white border-b border-white">Kontakt</a>
+      {/* Nawigacja */}
+      <nav className="flex justify-between items-center max-w-6xl mx-auto mb-20">
+        <div className="text-xl font-bold tracking-tighter">VELOS.</div>
+        <div className="flex gap-6 text-sm text-neutral-400">
+          <a href="mailto:kontakt@velos.dev" className="bg-white/5 px-4 py-2 rounded-full hover:bg-white/10 transition">Start Project</a>
         </div>
       </nav>
 
-      {/* Hero - Skupienie na wartości */}
-      <section className="flex flex-col items-center justify-center pt-32 pb-20 px-6 text-center">
-        <motion.span 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500"
-        >
-          Partner Technologiczny Twojego Biznesu
-        </motion.span>
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="text-6xl md:text-8xl font-medium tracking-tight mb-8"
-        >
-          Skalujemy Twoją <br/> infrastrukturę cyfrową.
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="text-lg text-neutral-400 max-w-xl mb-12 leading-relaxed"
-        >
-          Dostarczamy wysokowydajne rozwiązania software'owe i infrastrukturę klasy korporacyjnej. 
-          Zamieniamy wyzwania techniczne w Twoją przewagę rynkową.
-        </motion.p>
+      {/* Hero */}
+      <section className="max-w-4xl mx-auto text-center mb-32">
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-[1.1]">
+          Twoja wizja, <span className="text-neutral-500">zoptymalizowana technologicznie.</span>
+        </h1>
+        <p className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto">
+          Projektujemy cyfrowe fundamenty dla firm, które nie uznają kompromisów w wydajności.
+        </p>
       </section>
 
-      {/* Oferta - Język korzyści */}
-      <section id="oferta" className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-8">
-        {[
-          { title: "Architektura Systemów", desc: "Optymalizujemy przepływ danych i eliminujemy wąskie gardła." },
-          { title: "Rozwój Produktu", desc: "Tworzymy narzędzia, które pracują dla Ciebie 24/7." },
-          { title: "Infrastruktura", desc: "Stabilność klasy korporacyjnej dla najbardziej wymagających projektów." }
-        ].map((item, idx) => (
-          <div key={idx} className="p-8 border border-neutral-800 rounded-[20px] bg-neutral-900/20 hover:border-neutral-600 transition-colors">
-            <h3 className="text-xl font-medium mb-4">{item.title}</h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">{item.desc}</p>
+      {/* Bento Grid - Nowoczesny standard */}
+      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[600px]">
+        
+        {/* Główny box */}
+        <div className="md:col-span-2 p-8 bg-neutral-900/30 border border-white/5 rounded-3xl flex flex-col justify-end">
+          <h2 className="text-3xl font-semibold mb-2">Wydajność to waluta.</h2>
+          <p className="text-neutral-400">Budujemy systemy, które ładują się natychmiast i skalują bez ograniczeń.</p>
+        </div>
+
+        {/* Małe boxy */}
+        <div className="p-8 bg-neutral-900/30 border border-white/5 rounded-3xl">
+          <h3 className="text-xl mb-2">Boty AI</h3>
+          <p className="text-sm text-neutral-500">Automatyzacja, która pracuje, gdy Ty śpisz.</p>
+        </div>
+
+        <div className="p-8 bg-neutral-900/30 border border-white/5 rounded-3xl">
+          <h3 className="text-xl mb-2">Infrastruktura</h3>
+          <p className="text-sm text-neutral-500">Zero przestojów, 100% kontroli.</p>
+        </div>
+
+        <div className="md:col-span-2 p-8 bg-white text-black rounded-3xl flex items-center justify-between">
+          <div>
+            <h3 className="text-2xl font-bold">Gotowy na przeskok?</h3>
+            <p className="text-neutral-600">Porozmawiajmy o Twoim projekcie.</p>
           </div>
-        ))}
+          <button className="bg-black text-white px-6 py-3 rounded-full font-bold">Kontakt</button>
+        </div>
       </section>
 
-      {/* Footer */}
-      <footer className="max-w-7xl mx-auto px-12 py-12 border-t border-neutral-900 flex justify-between items-center text-xs text-neutral-600">
-        <p>&copy; {new Date().getFullYear()} VELOS. All rights reserved.</p>
-        <p>BUILDING THE FUTURE</p>
+      <footer className="max-w-6xl mx-auto mt-20 text-center text-neutral-700 text-sm">
+        © 2026 VELOS. All rights reserved.
       </footer>
     </main>
   );
