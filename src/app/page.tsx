@@ -2,215 +2,83 @@
 
 import { motion } from 'framer-motion';
 
-const services = [
-{
-title: 'Strony WWW',
-desc: 'Nowoczesne strony internetowe zoptymalizowane pod sprzedaż i szybkość działania.',
-},
-{
-title: 'Automatyzacje AI',
-desc: 'Automatyzacja procesów biznesowych oraz inteligentna obsługa klientów.',
-},
-{
-title: 'Systemy Web',
-desc: 'Dedykowane rozwiązania dopasowane do potrzeb Twojej firmy.',
-},
-];
-
 export default function Home() {
-return ( <main className="min-h-screen bg-black text-white overflow-hidden"> <div className="fixed inset-0 -z-10"> <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_40%)]" /> </div>
+  const services = [
+    { title: "Automatyzacja Discord", desc: "Systemy ticketowe, weryfikacje, boty wspierające moderację 24/7." },
+    { title: "Infrastruktura MC", desc: "Optymalizacja serwerów, skrypty customowe (KOTH, Boss, Economy)." },
+    { title: "Platformy Web", desc: "Nowoczesne panele zarządzania i strony typu SaaS." },
+    { title: "Bezpieczeństwo", desc: "Audyty, zabezpieczenia anty-bot i systemy logowania." }
+  ];
 
-```
-  <nav className="sticky top-0 z-50 backdrop-blur-xl border-b border-white/10">
-    <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-      <h1 className="text-2xl font-black tracking-tight">
-        VELOS.
-      </h1>
-
-      <div className="hidden md:flex gap-8 text-neutral-400">
-        <a href="#oferta">Oferta</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
-
-      <a
-        href="#kontakt"
-        className="bg-white text-black px-5 py-2 rounded-full font-semibold"
-      >
-        Darmowa wycena
-      </a>
-    </div>
-  </nav>
-
-  <section className="max-w-7xl mx-auto px-6 pt-32 pb-24">
-    <motion.div
-      initial={{ opacity: 0, y: 35 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      <div className="inline-flex px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-neutral-300 mb-8">
-        Web Development • AI • Automatyzacje
-      </div>
-
-      <h1 className="text-6xl md:text-8xl font-black leading-none max-w-6xl">
-        Budujemy
-        <span className="text-neutral-500"> nowoczesne </span>
-        rozwiązania cyfrowe dla ambitnych firm.
-      </h1>
-
-      <p className="text-neutral-400 text-xl max-w-2xl mt-8">
-        Tworzymy strony internetowe, automatyzacje AI i systemy,
-        które pomagają zdobywać klientów i rozwijać biznes szybciej.
-      </p>
-
-      <div className="flex flex-wrap gap-4 mt-10">
-        <a
-          href="#kontakt"
-          className="bg-white text-black px-8 py-4 rounded-full font-bold"
-        >
-          Rozpocznij projekt
-        </a>
-
-        <a
-          href="#oferta"
-          className="border border-white/10 px-8 py-4 rounded-full"
-        >
-          Poznaj ofertę
-        </a>
-      </div>
-    </motion.div>
-  </section>
-
-  <section className="max-w-7xl mx-auto px-6 mb-28">
-    <div className="grid md:grid-cols-3 gap-5">
-      <div className="p-8 rounded-3xl bg-white/5 border border-white/10">
-        <h3 className="text-5xl font-black">99.9%</h3>
-        <p className="text-neutral-500 mt-2">
-          Dostępność usług
-        </p>
-      </div>
-
-      <div className="p-8 rounded-3xl bg-white/5 border border-white/10">
-        <h3 className="text-5xl font-black">&lt;1s</h3>
-        <p className="text-neutral-500 mt-2">
-          Czas ładowania
-        </p>
-      </div>
-
-      <div className="p-8 rounded-3xl bg-white/5 border border-white/10">
-        <h3 className="text-5xl font-black">24/7</h3>
-        <p className="text-neutral-500 mt-2">
-          Wsparcie techniczne
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section
-    id="oferta"
-    className="max-w-7xl mx-auto px-6 mb-32"
-  >
-    <h2 className="text-5xl font-black mb-12">
-      Nasze usługi
-    </h2>
-
-    <div className="grid md:grid-cols-3 gap-6">
-      {services.map((service) => (
-        <div
-          key={service.title}
-          className="p-8 rounded-3xl bg-white/5 border border-white/10"
-        >
-          <h3 className="text-2xl font-bold mb-4">
-            {service.title}
-          </h3>
-
-          <p className="text-neutral-400">
-            {service.desc}
-          </p>
+  return (
+    <main className="min-h-screen bg-[#050505] text-white p-6 md:p-12 font-sans selection:bg-white selection:text-black">
+      
+      {/* Header */}
+      <nav className="flex justify-between items-center max-w-7xl mx-auto mb-32">
+        <div className="text-2xl font-bold tracking-tighter">VELOS<span className="text-neutral-600">.STUDIO</span></div>
+        <div className="flex gap-8 items-center">
+          <a href="#services" className="text-sm text-neutral-400 hover:text-white transition">Usługi</a>
+          <a href="mailto:velos.studio@gmail.com" className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-bold hover:bg-neutral-200 transition">Kontakt</a>
         </div>
-      ))}
-    </div>
-  </section>
+      </nav>
 
-  <section
-    id="portfolio"
-    className="max-w-7xl mx-auto px-6 mb-32"
-  >
-    <h2 className="text-5xl font-black mb-12">
-      Portfolio
-    </h2>
+      {/* Hero */}
+      <section className="max-w-5xl mx-auto text-center mb-40">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <span className="px-4 py-1 rounded-full border border-neutral-800 text-xs font-bold uppercase tracking-widest text-neutral-500 mb-6 inline-block">Dostępni do współpracy</span>
+          <h1 className="text-6xl md:text-9xl font-bold tracking-tighter mb-8 leading-[0.9]">
+            Architekci Twojego <br/><span className="text-neutral-600">cyfrowego wzrostu.</span>
+          </h1>
+          <p className="text-neutral-400 text-xl max-w-2xl mx-auto mb-12">
+            Tworzymy systemy, które eliminują ręczną pracę, zwiększają skalowalność serwerów i budują profesjonalny wizerunek Twojej marki.
+          </p>
+        </motion.div>
+      </section>
 
-    <div className="grid md:grid-cols-2 gap-6">
-      <div className="h-72 rounded-3xl bg-gradient-to-br from-neutral-900 to-neutral-800 border border-white/10 p-8">
-        <h3 className="text-2xl font-bold">
-          Sklep internetowy
-        </h3>
-        <p className="text-neutral-400 mt-3">
-          Projekt nastawiony na maksymalizację sprzedaży.
-        </p>
-      </div>
+      {/* Services Bento Grid */}
+      <section id="services" className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 mb-40">
+        <div className="md:col-span-4 mb-8">
+            <h2 className="text-sm uppercase tracking-widest text-neutral-500 font-bold">Nasze rozwiązania</h2>
+        </div>
+        
+        {services.map((s, i) => (
+          <div key={i} className="p-8 bg-neutral-900/30 border border-white/5 rounded-[2rem] h-64 flex flex-col justify-between hover:border-white/10 transition">
+            <div className="w-10 h-10 bg-white/5 rounded-full" />
+            <div>
+              <h3 className="text-xl font-bold mb-2">{s.title}</h3>
+              <p className="text-sm text-neutral-500">{s.desc}</p>
+            </div>
+          </div>
+        ))}
+      </section>
 
-      <div className="h-72 rounded-3xl bg-gradient-to-br from-neutral-900 to-neutral-800 border border-white/10 p-8">
-        <h3 className="text-2xl font-bold">
-          System AI
-        </h3>
-        <p className="text-neutral-400 mt-3">
-          Inteligentna automatyzacja procesów.
-        </p>
-      </div>
-    </div>
-  </section>
+      {/* Why Choose Us */}
+      <section className="max-w-7xl mx-auto mb-40">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-5xl font-bold tracking-tighter mb-6">Dlaczego VELOS?</h2>
+            <ul className="space-y-6 text-neutral-400 text-lg">
+              <li><strong className="text-white">Skalowalność:</strong> Budujemy rozwiązania, które obsłużą 10 i 10,000 użytkowników.</li>
+              <li><strong className="text-white">Szybkość wdrożenia:</strong> Rozumiemy tempo branży gamingowej i SaaS.</li>
+              <li><strong className="text-white">Autorskie podejście:</strong> Nie korzystamy z gotowców, które lagują serwer.</li>
+            </ul>
+          </div>
+          <div className="bg-neutral-900/50 rounded-[2rem] h-[400px] border border-white/5 p-10 flex items-center justify-center">
+            <p className="text-neutral-600 italic">"VELOS to standard, którego wymagają najlepsi."</p>
+          </div>
+        </div>
+      </section>
 
-  <section className="max-w-7xl mx-auto px-6 mb-32">
-    <h2 className="text-5xl font-black mb-12">
-      Dlaczego VELOS?
-    </h2>
+      {/* Final CTA */}
+      <section className="max-w-7xl mx-auto p-16 md:p-24 bg-white text-black rounded-[3rem] text-center">
+        <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8">Gotowy na kolejny etap?</h2>
+        <p className="text-xl text-neutral-700 mb-12 max-w-xl mx-auto">Przekonajmy się, jak VELOS może przyspieszyć Twój projekt. Pierwsza konsultacja jest darmowa.</p>
+        <a href="mailto:velos.studio@gmail.com" className="inline-block bg-black text-white px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition">Skontaktuj się</a>
+      </section>
 
-    <div className="grid md:grid-cols-2 gap-6">
-      <div className="p-8 rounded-3xl bg-white/5 border border-white/10">
-        <h3 className="text-2xl font-bold mb-4">
-          Nowoczesny design
-        </h3>
-
-        <p className="text-neutral-400">
-          Strony projektowane zgodnie z aktualnymi trendami.
-        </p>
-      </div>
-
-      <div className="p-8 rounded-3xl bg-white/5 border border-white/10">
-        <h3 className="text-2xl font-bold mb-4">
-          Maksymalna wydajność
-        </h3>
-
-        <p className="text-neutral-400">
-          Optymalizacja pod szybkość i SEO.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section
-    id="kontakt"
-    className="max-w-5xl mx-auto px-6 pb-32"
-  >
-    <div className="bg-white text-black rounded-[40px] p-12 text-center">
-      <h2 className="text-5xl font-black mb-6">
-        Gotowy na rozwój?
-      </h2>
-
-      <p className="text-neutral-700 text-lg mb-8">
-        Napisz do nas i otrzymaj darmową wycenę projektu.
-      </p>
-
-      <a
-        href="kontact.velos@gmail.com"
-        className="inline-block bg-black text-white px-8 py-4 rounded-full font-bold"
-      >
-        Skontaktuj się
-      </a>
-    </div>
-  </section>
-</main>
-
-);
+      <footer className="max-w-7xl mx-auto mt-32 py-12 border-t border-white/5 text-center text-neutral-700 text-xs uppercase tracking-widest font-bold">
+        © 2026 VELOS Studio. All rights reserved.
+      </footer>
+    </main>
+  );
 }
